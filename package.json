@@ -1,0 +1,16 @@
+{
+    "packageManager": "pnpm@10.6.2",
+    "scripts": {
+        "dev": "cd {{crate_name}}-web-native-lib && pnpm build && cd ../{{crate_name}}-web && pnpm dev",
+        "build": "pnpm build:native-web-lib && pnpm build:web",
+        "build:native-web-lib": "cd {{crate_name}}-web-native-lib && pnpm build",
+        "build:web": "cd {{crate_name}}-web && pnpm build",
+        "lint": "cd {{crate_name}}-web && pnpm lint",
+        "preview": "cd {{crate_name}}-web && pnpm preview"
+    },
+    "pnpm": {
+        "overrides": {
+            "axios": "^1.8.2"
+        }
+    }
+}

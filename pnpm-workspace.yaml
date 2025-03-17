@@ -1,0 +1,3 @@
+packages:
+    - {{crate_name}}-web-native-lib
+    - {{crate_name}}-web

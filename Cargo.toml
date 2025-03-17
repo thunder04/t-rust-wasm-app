@@ -1,0 +1,18 @@
+[workspace]
+members = [
+    "{{crate_name}}",
+    "{{crate_name}}-lib",
+    "{{crate_name}}-web-native-lib",
+]
+default-members = ["{{crate_name}}"]
+resolver = "2"
+
+[workspace.dependencies]
+color-eyre = "0.6.3"
+eyre = "0.6.12"
+thiserror = "1.0.63"
+tracing = "0.1.40"
+
+[workspace.dependencies.tracing-subscriber]
+version = "0.3.18"
+features = ["parking_lot", "tracing-log", "env-filter"]
